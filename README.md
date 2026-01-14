@@ -8,6 +8,12 @@
 > - We do not accept issues or pull requests in languages other than English.
 > - Issues that do not follow the Issue Template will be closed without question.
 
+> [!NOTE]
+>
+> - This project is not the RunCat currently available on the App Store, but a next-generation RunCat being newly developed.
+> - It is not intended to be a complete replacement or an upgrade of the existing RunCat, but rather an attempt to implement a new concept.
+> - Since it is currently under development for the first release, we do not accept issues or pull requests (PRs) at this time.
+
 [![Github issues](https://img.shields.io/github/issues/Kyome22/RunCatOne)](https://github.com/Kyome22/RunCatOne/issues)
 [![Github forks](https://img.shields.io/github/forks/Kyome22/RunCatOne)](https://github.com/Kyome22/RunCatOne/network/members)
 [![Github stars](https://img.shields.io/github/stars/Kyome22/RunCatOne)](https://github.com/Kyome22/RunCatOne/stargazers)
@@ -16,6 +22,19 @@
 [![Github license](https://img.shields.io/github/license/Kyome22/RunCatOne)](https://github.com/Kyome22/RunCatOne/)
 
 `Swift` `macOS` `Xcode` `RunCat`
+
+## Requirements
+
+- Development with Xcode 26.2+
+- Compatible with macOS 26.0+
+- Written in Swift 6.2
+
+## Architecture
+
+This project is built using an architecture called [LUCA](https://github.com/Kyome22/LUCA).  
+Please refer to the following article for more details.
+
+https://dev.to/kyome22/luca-a-modern-architecture-for-swiftui-development-3g2i
 
 ## Contributors
 
