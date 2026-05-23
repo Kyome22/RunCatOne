@@ -7,10 +7,10 @@ xcuserdata/
 *.xccheckout
 
 # Swift Package Manager
-Packages.resolved
 LocalPackage/Package.resolved
 .swiftpm/
 .build/
 
 # Test
+DerivedData/
 TestResults/

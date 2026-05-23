@@ -1,0 +1,38 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*.*.*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  run-unit-test:
+    name: Unit Test
+    runs-on: macos-26
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: "/Applications/Xcode_26.2.0.app/Contents/Developer"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Show Xcode Version
+        run: xcodebuild -version
+
+      - name: Run Unit Tests
+        shell: bash
+        working-directory: LocalPackage
+        run: |
+          xcodebuild test \
+            -scheme LocalPackage-Package \
+            -destination "platform=macOS,arch=arm64" \
+            -retry-tests-on-failure \
+            -derivedDataPath DerivedData \
+            -resultBundlePath TestResults/unit_test_result_bundle | \
+            xcbeautify
